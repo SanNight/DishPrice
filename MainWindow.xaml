@@ -1,0 +1,48 @@
+﻿<Window x:Class="DishPrice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DishPrice" xmlns:userxamlelements="clr-namespace:DishPrice.UserXAMLElements"
+        mc:Ignorable="d"
+        Title="Вартість страв" MinHeight="450" MinWidth="800" 
+        WindowStartupLocation="CenterScreen" FontFamily="Comic Sans MS"
+        WindowState="Maximized" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Padding" Value="7"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Button Content="Головна" Name="btnMainPage" Click="goPageMain"/>
+            <Button Content="Страви" Name="btnShowDishes" Click="goPageDishes" VerticalAlignment="Top"/>
+            <Button Content="Інгрідієнти" Name="btnShowIngridients" Click="goPageIngridients"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+            <Button Content="+ інгрідієнт" Name="btnAddIngridient" Click="AddIngridient_Click"/>
+            <Button Content="+ страва" Name="btnCreateDish" Click="goPageAddDish"/>
+        </StackPanel>
+        <Frame Name="frameMain" Grid.Row="1" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
+    </Grid>
+</Window>

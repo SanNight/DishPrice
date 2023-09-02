@@ -1,0 +1,40 @@
+﻿<Window x:Class="DishPrice.Windows.WinRecipeAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DishPrice.Windows"
+        mc:Ignorable="d"
+        Title="WinRecipeAdd" SizeToContent="WidthAndHeight" 
+        FontFamily="comic sans ms" FontSize="16" Margin="3" Topmost="True" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="MinWidth" Value="200"/>
+            <Setter Property="MaxWidth" Value="300"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Назва рецепту" Name="lbName" Grid.Row="0"/>
+        <TextBox Name="tbName" Grid.Row="1"/>
+        
+        <Label Content="Зміст" Name="lbRecipe" Grid.Row="2"/>
+        <TextBox Name="tbDescription" Grid.Row="3" MaxHeight="75" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <Button Content="Зберегти" Name="btnSave" Grid.Row="4" Click="btnSave_Click"/>
+    </Grid>
+</Window>

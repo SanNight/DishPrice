@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="DishPrice.UserXAMLElements.CardIngrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DishPrice.UserXAMLElements"
+             mc:Ignorable="d" 
+             Height="130" Width="100" Margin="5" Background="LightCyan" Loaded="UserControl_Loaded">
+
+    <UserControl.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Stretch" Value="UniformToFill"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <Image Name="itemIcon" Width="100" Height="100" DockPanel.Dock="Top" Source="/Resources/no img.png"/>
+            <Label Name="itemName" DockPanel.Dock="Top" HorizontalAlignment="Center" Content="Назва"/>
+        </DockPanel>
+    </Grid>
+</UserControl>
