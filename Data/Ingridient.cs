@@ -98,7 +98,7 @@ namespace DishPrice.Data
             AmountPrimal = 0;
             Amount = 0;
             AmountType = "кг";
-            ImgPath = Services.GetDefaultImg().Source.ToString();
+            // ImgPath = Services.GetDefaultImg().Source.ToString();
         }
 
         public void DisplayTo(WrapPanel wrapPanel)

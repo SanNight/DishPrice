@@ -54,10 +54,10 @@
                 <Label Content="вага" Name="itemWeight" DockPanel.Dock="Top" Style="{StaticResource Price}"/>
                 <Label Content=" г "                    DockPanel.Dock="Top" Style="{StaticResource Price}"/>
             </StackPanel>
-            <Label Name="itemDescription" DockPanel.Dock="Top" Style="{StaticResource Description}"/>
-            <WrapPanel Name="spIngridList" DockPanel.Dock="Top" Margin="5" HorizontalAlignment="Center"/>
-            <Label Name="itemTags" DockPanel.Dock="Top" Style="{StaticResource Description}"/>
-            <Label Name="itemSynonims" DockPanel.Dock="Top" Style="{StaticResource Description}"/>
+            <Label  Name="itemDescription"  DockPanel.Dock="Top" Style="{StaticResource Description}"/>
+            <WrapPanel  Name="spIngridList"     DockPanel.Dock="Top" Margin="5" HorizontalAlignment="Center"/>
+            <Label  Name="itemTags"     DockPanel.Dock="Top" Style="{StaticResource Description}"/>
+            <Label  Name="itemSynonims" DockPanel.Dock="Top" Style="{StaticResource Description}"/>
         </DockPanel>
     </Grid>
 </UserControl>

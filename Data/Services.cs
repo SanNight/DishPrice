@@ -1,10 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Net.NetworkInformation;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.ComponentModel;
+
 using DishPrice.Frames;
 using DishPrice.UserXAMLElements;
 
@@ -107,12 +107,12 @@ namespace DishPrice.Data
             Image image = new Image();
             BitmapImage bi3 = new BitmapImage();
 
-            bi3.BeginInit();
-            bi3.UriSource =
-                new Uri("C:\\Users\\ПК\\source\\repos\\DishPrice\\DishPrice\\bin\\Debug\\Res\\no img.png",
-                UriKind.Absolute);
-            bi3.EndInit();
-            image.Source = bi3;
+            //bi3.BeginInit();
+            //bi3.UriSource =
+            //    new Uri("C:\\Users\\ПК\\source\\repos\\DishPrice\\DishPrice\\bin\\Debug\\Res\\no img.png",
+            //    UriKind.Absolute); // Додати зображення в проект
+            //bi3.EndInit();
+            //image.Source = bi3;
 
             image.Stretch = Stretch.Uniform;
             return image;
